@@ -25,7 +25,7 @@ class ChangePasswordRequest extends FormRequest
     {
         return [
             'email' => 'required|email',
-            'password' => 'required|confirm'
+            'password' => 'required|confirmed'
         ];
     }
 }

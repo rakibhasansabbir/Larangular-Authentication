@@ -26,7 +26,7 @@ class ResetPasswordController extends Controller
     }
 
     public function createToken($email){
-        $oldToken = DB::table('password_resets')->where('email', $email)->first()->token;
+        $oldToken = DB::table('password_resets')->where('email', $email)->first();
 
         if ($oldToken) {
             return $oldToken;
